@@ -6,3 +6,14 @@ body {
 #map {
     height: 500px;
 }
+
+button {
+  color: black !important;
+  text-decoration: none;
+}
+
+button:hover {
+  color: black !important;
+  text-decoration: none !important;
+  font-weight: bold;
+}
