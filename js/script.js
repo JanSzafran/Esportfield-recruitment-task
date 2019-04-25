@@ -15,6 +15,7 @@ function setMarker(ev) {
 
     newMarker = new L.marker([lat, lng], {
         draggable: 'true',
+        id: number
     }).addTo(map);
 
     markerArray.push(newMarker);
@@ -80,7 +81,7 @@ function removeMarkerWhenIconClicked() {
         icon.addEventListener('click', function() {
             
             markerArray.forEach(element => {
-                if(element._latlng.lat.toString() === icon.parentNode.parentNode.childNodes[1].textContent) {
+                if(element.options.id.toString() === icon.parentNode.parentNode.childNodes[0].textContent) {
                     element.remove();
                     icon.parentNode.parentNode.remove();
                 }
